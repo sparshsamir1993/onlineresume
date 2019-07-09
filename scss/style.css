@@ -508,6 +508,15 @@ body {
   .edu-wrap {
     flex-direction: column;
   }
+
+  .loader-wrapper {
+    width: 85%;
+    height: 50%;
+  }
+  .loader-wrapper .loader-text {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
