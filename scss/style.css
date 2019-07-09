@@ -1,0 +1,513 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+/*************************** FONTS ********************/
+@font-face {
+  font-family: Raleway-semibold;
+  src: url(../assets/fonts/Raleway/Raleway-SemiBold.ttf);
+}
+@font-face {
+  font-family: sf-regular;
+  src: url("../assets/fonts/sanfrancisco/SanFranciscoText-Regular.otf");
+}
+/******************* LOADER ********************/
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader-wrapper {
+  width: 30%;
+  height: 60%;
+  margin: 0 auto;
+  display: flex;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+  position: relative;
+}
+.loader-wrapper img {
+  height: 100%;
+  width: 100%;
+  transform-origin: 50% 42%;
+  animation: specs-on 3s ease-in 1 normal forwards;
+}
+
+.loader-text {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  animation: display-after-specs 4s ease-in 0s normal forwards;
+}
+
+/***************** navbar **********************/
+.nav-bar {
+  height: 22%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-link-wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.nav-banner {
+  height: 160px;
+  width: 170px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.nav-banner img {
+  height: 100%;
+  width: 100%;
+}
+
+.nav-link {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.nav-link a {
+  text-decoration: none;
+  color: white;
+  font-family: Raleway-semibold;
+}
+
+/***************** introbody **********************/
+.intro {
+  height: 100vh;
+  background: linear-gradient(0.25turn, black 60%, grey);
+  position: relative;
+}
+.intro .dp-wrap {
+  height: 100%;
+  width: 19%;
+  margin: 0 80.9%;
+  position: relative;
+}
+.intro .dp-wrap img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.intro .intro-text-wrap {
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 35%;
+  text-align: center;
+  margin-left: 30px;
+  height: 100px;
+  width: 35%;
+  font-family: Raleway-semibold;
+}
+.intro .to-change {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+}
+.intro .intro-text {
+  font-size: 60px;
+}
+.intro .intro-text .to-change {
+  font-size: 55px;
+}
+
+/***************** experience *********************/
+.experience-wrap {
+  background: #edeeef;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.jobs-worked-in-heading {
+  width: 15%;
+  margin: 0 auto;
+  margin-top: 30px;
+  color: black;
+  font-size: 30px;
+  font-family: Raleway-semibold;
+  text-align: center;
+}
+.jobs-worked-in-heading hr {
+  border: 2px solid black;
+  width: 0px;
+}
+
+.expand-jobs-hr {
+  animation: expand-jobs-hr 1s ease-in 0s normal forwards;
+}
+
+[data-aos=expand-jobs-hr] {
+  width: 0;
+}
+[data-aos=expand-jobs-hr].aos-animate {
+  width: 100%;
+}
+
+.job1-parallax {
+  height: 300px;
+  width: 100%;
+  background-image: url("../assets/zoho.png");
+  background-color: white;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-attachment: fixed;
+  margin-top: 50px;
+}
+
+.job1-description {
+  width: 100%;
+  background-color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+}
+.job1-description .title {
+  font-size: 25px;
+  font-family: Raleway-semibold;
+  width: 30%;
+  margin-left: 10%;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.job1-description .description {
+  color: white;
+}
+.job1-description .description ul {
+  line-height: 3em;
+}
+.job1-description .description li {
+  font-family: sf-regular;
+}
+
+.job2-parallax {
+  height: 300px;
+  width: 100%;
+  background-image: url("../assets/commutatus.png");
+  background-color: white;
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-attachment: fixed;
+}
+
+.job2-description {
+  width: 100%;
+  background-color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+}
+.job2-description .title {
+  font-size: 25px;
+  font-family: Raleway-semibold;
+  width: 30%;
+  margin-left: 10%;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.job2-description .description {
+  color: white;
+}
+.job2-description .description ul {
+  line-height: 3em;
+}
+.job2-description .description li {
+  font-family: sf-regular;
+}
+
+/***************** education **********************/
+.edu-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+.edu-wrap .edu-1 {
+  background-image: url("../assets/srm.png");
+  background-size: 80%;
+  height: 300px;
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
+}
+.edu-wrap .edu-1 .details-wrap {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: rgba(73, 83, 83, 0.8);
+  transition: height 0.5s;
+  border-radius: 7px;
+  text-align: center;
+  color: white;
+}
+.edu-wrap .edu-1 .details-wrap .course {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  line-height: 2em;
+  font-size: 25px;
+}
+.edu-wrap .edu-1:hover .details-wrap, .edu-wrap .edu-1:active .details-wrap {
+  height: 100%;
+  transition: height 0.5s;
+}
+.edu-wrap .edu-2 {
+  background-image: url("../assets/conestoga-college.png");
+  background-size: 80%;
+  height: 300px;
+  width: 400px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
+}
+.edu-wrap .edu-2 .details-wrap {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: rgba(73, 83, 83, 0.8);
+  transition: height 0.5s;
+  border-radius: 7px;
+  text-align: center;
+  color: white;
+}
+.edu-wrap .edu-2 .details-wrap .course {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  line-height: 2em;
+  font-size: 25px;
+}
+.edu-wrap .edu-2:hover .details-wrap, .edu-wrap .edu-2:active .details-wrap {
+  height: 100%;
+  transition: height 0.5s;
+}
+
+.social-icons {
+  display: flex;
+  width: 40%;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+}
+.social-icons .fb {
+  background-color: #3c5a99;
+  width: 33.33%;
+  text-align: center;
+}
+.social-icons .fb i {
+  color: white;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%) translateX(-50%);
+}
+.social-icons .linkedin {
+  background: #0077b5;
+  width: 33.33%;
+  text-align: center;
+}
+.social-icons .linkedin i {
+  color: white;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%) translateX(-50%);
+}
+.social-icons .github {
+  background-color: black;
+  width: 33.33%;
+  text-align: center;
+}
+.social-icons .github i {
+  color: white;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+/***************** card **********************/
+.contact-me {
+  background-color: #424242;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.contact-me .card {
+  height: 55%;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.contact-me .card:hover .flipper .front, .contact-me .card:active .flipper .front {
+  transform: perspective(1000px) rotateY(0deg);
+}
+.contact-me .card:hover .flipper .back, .contact-me .card:active .flipper .back {
+  transform: perspective(1000px) rotateY(-180deg);
+}
+.contact-me .card .flipper {
+  height: 100%;
+  width: 100%;
+  transition: 0.6s;
+  position: relative;
+}
+.contact-me .card .flipper .front, .contact-me .card .flipper .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.7s;
+  box-shadow: 1px 1px 29px 29px #272727;
+}
+.contact-me .card .flipper .front {
+  z-index: 2;
+  background: beige;
+  transform: rotateY(180deg);
+}
+.contact-me .card .flipper .front .container {
+  padding: 40px;
+}
+.contact-me .card .flipper .front .container ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 2em;
+}
+.contact-me .card .flipper .front::before, .contact-me .card .flipper .front::after {
+  content: "";
+  position: absolute;
+  right: 0;
+}
+.contact-me .card .flipper .front::before {
+  background: #2c3e50;
+  width: 140px;
+  height: 120px;
+  bottom: 0;
+  clip-path: polygon(0 100%, 40% 0, 100% 100%);
+}
+.contact-me .card .flipper .front::after {
+  background: grey;
+  width: 37%;
+  height: 100%;
+  top: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+}
+.contact-me .card .flipper .back {
+  height: 100%;
+  width: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(0deg);
+}
+.contact-me .card .flipper .back .logo-wrap {
+  height: 70%;
+  width: 35%;
+}
+.contact-me .card .flipper .back .logo-wrap img {
+  height: 100%;
+  width: 100%;
+}
+
+/***************** keyframes **********************/
+@keyframes specs-on {
+  0% {
+    transform: rotateZ(0deg) scale(1, 1);
+    opacity: 1;
+  }
+  40% {
+    transform: rotateZ(360deg);
+    opacity: 0.5;
+  }
+  90% {
+    transform: scale(5, 5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+@keyframes display-after-specs {
+  0% {
+    opacity: 0;
+    font-size: 12px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 30px;
+  }
+}
+@keyframes expand-jobs-hr {
+  from {
+    opacity: 1;
+    width: 0px;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+/***************** media query **********************/
+@media (max-width: 480px) {
+  .job2-description, .job1-description {
+    flex-direction: column;
+  }
+  .job2-description .title, .job1-description .title {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+  .job2-description .description, .job1-description .description {
+    padding-right: 10px;
+  }
+
+  .jobs-worked-in-heading {
+    width: 70%;
+  }
+
+  .edu-wrap {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

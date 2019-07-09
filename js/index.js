@@ -1,0 +1,71 @@
+$(document).ready(function(){
+
+    setTimeout(hideLoader, 4000);
+    // setTimeout(hideLoader, 50);
+    
+    // handleIndexBannerAnimation();
+
+});
+
+function hideLoader(){
+    
+    // $(".loader").addClass("animated fadeOut");
+    $(".loader").css("display", "none");
+    var pageName = $("#page-name").text().trim();
+    if(pageName == "home"){
+        $(".main-content").css("display", "block",handleIndexBannerAnimation());
+        // $(".main-content").css("display", "block", handleExperienceAnimations());
+    }
+    // else if(pageName == "experience"){
+    //     $(".main-content").css("display", "block", handleExperienceAnimations());
+    // }
+    
+
+
+    // $(".main-content").addClass("fadeIn");
+
+}
+
+function handleExperienceAnimations(){
+    jobsUnderline();
+}
+
+function jobsUnderline(){
+    $(".jobs-worked-in-heading hr").addClass("expand-jobs-hr");
+}
+function handleIndexBannerAnimation(){
+
+    loop();      
+
+    
+    function loop(){
+      const bigarr = $(".intro-text > .to-change");
+      bigarr.eq(0).animate({
+        'opacity': '1'
+      },1500);
+      bigarr.eq(0).animate({
+        'opacity': '0'
+      },400, loop1);
+    }
+    function loop1(){
+      const bigarr = $(".intro-text > .to-change");
+      bigarr.eq(1).animate({
+        'opacity': '1'
+      },1500);
+      bigarr.eq(1).animate({
+        'opacity': '0'
+      },400, loop2);
+    }
+    function loop2(){
+      const bigarr = $(".intro-text > .to-change");
+      bigarr.eq(2).animate({
+        'opacity': '1'
+      },1500);
+      bigarr.eq(2).animate({
+        'opacity': '0'
+      },400,loop);      
+    }
+  
+  
+
+}
