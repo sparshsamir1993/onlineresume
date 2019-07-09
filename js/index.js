@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    $("body").css("overflow", "hidden");
+    $("html").css("overflow", "hidden");
     setTimeout(hideLoader, 4000);
     // setTimeout(hideLoader, 50);
     
@@ -10,6 +12,8 @@ $(document).ready(function(){
 function hideLoader(){
     
     // $(".loader").addClass("animated fadeOut");
+    $("body").css("overflow", "auto");
+    $("html").css("overflow", "auto");
     $(".loader").css("display", "none");
     var pageName = $("#page-name").text().trim();
     if(pageName == "home"){
