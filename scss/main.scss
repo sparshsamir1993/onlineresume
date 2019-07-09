@@ -560,4 +560,14 @@ body{
     .edu-wrap{
         flex-direction: column;
     }
+
+    .loader-wrapper{
+        width: 85%;
+        height: 50%;
+
+        .loader-text{
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
