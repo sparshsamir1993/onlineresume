@@ -151,7 +151,7 @@ body{
 .jobs-worked-in-heading{
     width: 15%;
     margin: 0 auto;
-    margin-top: 30px;
+    padding-top: 30px;
     color: black;
     font-size: 30px;
     font-family: Raleway-semibold;
@@ -562,12 +562,63 @@ body{
     }
 
     .loader-wrapper{
-        width: 85%;
-        height: 50%;
+        width: 300px;
+        height: 300px;
 
         .loader-text{
             width: 100%;
             text-align: center;
+        }
+    }
+
+    .contact-me{
+        .card{
+            width: 90%;
+            top: 45%;
+            height: 65%;
+            .flipper{
+                .back{
+                    .logo-wrap{
+                        width: 75%;
+                        height: 60%;   
+                    }
+                }
+                .front::before{
+                    clip-path:  polygon(0 100%, 75% 0, 100% 100%);
+                }
+                .front{
+                    .container{
+                        padding-top:90px;
+                    }
+                }
+            }
+        }
+    }
+    .job2-parallax, .job1-parallax{
+        background-size: 100%;
+    }
+
+    .job1-description, .job2-description{
+        .title{
+            margin-top:20px;
+            margin-bottom: 40px;
+        }
+    }
+    .intro{
+        .dp-wrap{
+            img{
+                height: 300px;
+            }
+        }
+        .intro-text{
+            font-size: 38px;
+            .to-change{
+                font-size: 40px;
+            }
+        }
+        .intro-text-wrap{
+            width: 80%;
+            left: 45%;
         }
     }
 }
