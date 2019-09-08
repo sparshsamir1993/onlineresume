@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     $("body").css("overflow", "hidden");
     $("html").css("overflow", "hidden");
-    setTimeout(hideLoader, 4000);
+    setTimeout(hideLoader, 400);
     // setTimeout(hideLoader, 50);
     
     // handleIndexBannerAnimation();

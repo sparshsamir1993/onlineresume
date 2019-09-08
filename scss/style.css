@@ -240,6 +240,83 @@ body {
   font-family: sf-regular;
 }
 
+.timeline {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  padding: 3%;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+
+.container {
+  padding: 20px 5px;
+  position: relative;
+  width: 45%;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -45px;
+  background-color: red;
+  border: 4px solid orange;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 1%;
+}
+
+.right {
+  left: 53%;
+}
+
+.right::after {
+  left: -47px;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 20px;
+  width: 0;
+  z-index: 1;
+  right: -10px;
+  border: medium solid black;
+  border-width: 10px 0px 10px 10px;
+  border-color: transparent transparent transparent black;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 20px;
+  width: 0;
+  z-index: 1;
+  left: -10px;
+  border: medium solid black;
+  border-width: 10px 10px 10px 0px;
+  border-color: transparent black transparent transparent;
+}
+
 /***************** education **********************/
 .edu-wrap {
   display: flex;
