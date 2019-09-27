@@ -634,6 +634,7 @@ body {
   }
 }
 /***************** media query **********************/
+/***************** media query **********************/
 @media (max-width: 480px) {
   .job2-description, .job1-description {
     flex-direction: column;
@@ -690,17 +691,56 @@ body {
   }
 
   .intro .dp-wrap img {
-    height: 300px;
+    height: 40%;
   }
   .intro .intro-text {
-    font-size: 38px;
+    font-size: 2rem;
   }
   .intro .intro-text .to-change {
-    font-size: 40px;
+    font-size: 2.2rem;
   }
   .intro .intro-text-wrap {
     width: 80%;
     left: 45%;
+    margin-left: 0;
+  }
+
+  .nav-banner {
+    height: 100px;
+    width: 100px;
+  }
+
+  .timeline::after {
+    left: 90%;
+  }
+
+  .exp-container {
+    width: 82%;
+    margin-bottom: 10px;
+  }
+  .exp-container .company-logo {
+    width: 100%;
+  }
+
+  .exp-content {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .exp-content ul {
+    padding-left: 10px;
+  }
+
+  .right {
+    left: 3%;
+  }
+  .right:before {
+    right: -10px;
+    left: auto;
+    border-width: 10px 0px 10px 10px;
+    border-color: transparent transparent transparent black;
+  }
+  .right:after {
+    left: auto;
   }
 }
 

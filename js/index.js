@@ -19,6 +19,8 @@ function handleExpArrowAnimation(){
       eleToDisplay.removeClass("height-auto");
       arrow.removeClass("rotate-arrow");
     }else{
+      $(".more-arrow i").removeClass("rotate-arrow");
+      $(".exp-content").removeClass("height-auto");
       eleToDisplay.addClass("height-auto");
       arrow.addClass("rotate-arrow");
     }
