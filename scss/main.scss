@@ -1,6 +1,7 @@
 
 html{
-	height: 100%;
+    height: 100%;
+    font-family: Raleway-regular;
 }
 body{
 	min-height: 100%;
@@ -11,11 +12,19 @@ body{
 @font-face{
 	font-family: Raleway-semibold;
 	src: url(../assets/fonts/Raleway/Raleway-SemiBold.ttf);
-
 }
+@font-face{
+	font-family: Raleway-regular;
+	src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
+}
+
 @font-face{
     font-family: sf-regular;
     src: url("../assets/fonts/sanfrancisco/SanFranciscoText-Regular.otf")
+}
+@font-face{
+    font-family: sf-bold;
+    src: url("../assets/fonts/sanfrancisco/SanFranciscoText-Bold.otf");
 }
 /******************* LOADER ********************/
 
@@ -273,15 +282,79 @@ body{
     bottom: 0;
     left: 50%;
 }
-.container{
-    padding: 20px 5px;
+.exp-container{
+    // padding: 20px 5px;
     position: relative;
     width: 45%;
     background-color: black;
     color: white;
-    padding-left: 20px;
+    // padding-left: 20px;
+    border-radius: 10px;
+
+    .content{
+        padding: 5px;
+
+    }
+    .company{
+        position: relative;
+        background-color: #edeeef;
+        color: black;
+    }
+    .company-name{
+        font-family: sf-bold;
+        font-size: 2rem;
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+    }
+    .company-logo{
+        // height: 75px;
+        width: 60%;
+        margin: 0 auto;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .job-title{
+        padding: 10px;
+        padding-bottom: 0;
+        font-size: 1.5rem;
+        font-family: sf-bold;
+    }
+    .time-period{
+        padding: 10px;
+        padding-top: 0;
+    }
+    .exp-content{
+        padding: 10px;
+        padding-top: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height .5s ease-in;
+
+        li{
+            padding-bottom: 5px;
+        }
+    }
+    .more-arrow{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+        transform-origin: 50% 80%;
+        i{
+            transition: .5s ease-in;
+        }
+        
+    }
 }
-.container::after{
+
+.height-auto{
+    height: 190px !important;
+    transition: height .5s ease-in;
+}
+.exp-container::after{
     content: '';
     position: absolute;
     width: 25px;
@@ -293,8 +366,13 @@ body{
     border-radius: 50%;
     z-index: 1;
 }
+.rotate-arrow{
+    transform: rotate(180deg);
+    transform-origin: 50% 80%;
+    transition: .5s ease-in;
+}
 .left{
-    left: 1%;
+    left: 3%;
 }
 .right{
     left: 53%;

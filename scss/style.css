@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  font-family: Raleway-regular;
 }
 
 body {
@@ -13,8 +14,16 @@ body {
   src: url(../assets/fonts/Raleway/Raleway-SemiBold.ttf);
 }
 @font-face {
+  font-family: Raleway-regular;
+  src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
+}
+@font-face {
   font-family: sf-regular;
   src: url("../assets/fonts/sanfrancisco/SanFranciscoText-Regular.otf");
+}
+@font-face {
+  font-family: sf-bold;
+  src: url("../assets/fonts/sanfrancisco/SanFranciscoText-Bold.otf");
 }
 /******************* LOADER ********************/
 .loader {
@@ -257,16 +266,72 @@ body {
   left: 50%;
 }
 
-.container {
-  padding: 20px 5px;
+.exp-container {
   position: relative;
   width: 45%;
   background-color: black;
   color: white;
-  padding-left: 20px;
+  border-radius: 10px;
+}
+.exp-container .content {
+  padding: 5px;
+}
+.exp-container .company {
+  position: relative;
+  background-color: #edeeef;
+  color: black;
+}
+.exp-container .company-name {
+  font-family: sf-bold;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+.exp-container .company-logo {
+  width: 60%;
+  margin: 0 auto;
+}
+.exp-container .company-logo img {
+  height: 100%;
+  width: 100%;
+}
+.exp-container .job-title {
+  padding: 10px;
+  padding-bottom: 0;
+  font-size: 1.5rem;
+  font-family: sf-bold;
+}
+.exp-container .time-period {
+  padding: 10px;
+  padding-top: 0;
+}
+.exp-container .exp-content {
+  padding: 10px;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-in;
+}
+.exp-container .exp-content li {
+  padding-bottom: 5px;
+}
+.exp-container .more-arrow {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  transform-origin: 50% 80%;
+}
+.exp-container .more-arrow i {
+  transition: 0.5s ease-in;
 }
 
-.container::after {
+.height-auto {
+  height: 190px !important;
+  transition: height 0.5s ease-in;
+}
+
+.exp-container::after {
   content: "";
   position: absolute;
   width: 25px;
@@ -279,8 +344,14 @@ body {
   z-index: 1;
 }
 
+.rotate-arrow {
+  transform: rotate(180deg);
+  transform-origin: 50% 80%;
+  transition: 0.5s ease-in;
+}
+
 .left {
-  left: 1%;
+  left: 3%;
 }
 
 .right {
