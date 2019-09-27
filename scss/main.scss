@@ -687,6 +687,7 @@ body{
 
 /***************** media query **********************/
 
+/***************** media query **********************/
 @media  (max-width: 480px) {
     .job2-description, .job1-description{
         flex-direction: column;
@@ -767,5 +768,9 @@ body{
             width: 80%;
             left: 45%;
         }
+    }
+    .nav-banner{
+        height: 100px;
+        width: 100px;
     }
 }

@@ -6,9 +6,25 @@ $(document).ready(function(){
     // setTimeout(hideLoader, 50);
     
     // handleIndexBannerAnimation();
+    handleExpArrowAnimation();
 
 });
 
+function handleExpArrowAnimation(){
+  $(".more-arrow").click(function(e){
+    let eleToDisplay = $(e.currentTarget).parent().find(".exp-content");
+    let arrow = $(e.currentTarget).parent().find(".more-arrow i");
+    console.log(eleToDisplay);
+    if(eleToDisplay.hasClass("height-auto")){
+      eleToDisplay.removeClass("height-auto");
+      arrow.removeClass("rotate-arrow");
+    }else{
+      eleToDisplay.addClass("height-auto");
+      arrow.addClass("rotate-arrow");
+    }
+    
+  })
+}
 function hideLoader(){
     
     // $(".loader").addClass("animated fadeOut");
