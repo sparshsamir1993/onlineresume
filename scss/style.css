@@ -594,6 +594,12 @@ body {
   width: 100%;
 }
 
+.kh-logo {
+  width: 80% !important;
+  margin: 0 auto;
+  display: block;
+}
+
 /***************** keyframes **********************/
 @keyframes specs-on {
   0% {
@@ -671,14 +677,20 @@ body {
     height: 65%;
   }
   .contact-me .card .flipper .back .logo-wrap {
-    width: 75%;
-    height: 60%;
+    width: 60%;
+    height: auto;
   }
   .contact-me .card .flipper .front::before {
     clip-path: polygon(0 100%, 75% 0, 100% 100%);
   }
   .contact-me .card .flipper .front .container {
     padding-top: 90px;
+  }
+  .contact-me .card .flipper .front .container ul {
+    font-size: 0.7rem;
+  }
+  .contact-me .card .flipper .front .container .profession {
+    font-size: 0.9rem;
   }
 
   .job2-parallax, .job1-parallax {
@@ -716,10 +728,13 @@ body {
 
   .exp-container {
     width: 82%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .exp-container .company-logo {
     width: 100%;
+  }
+  .exp-container .company-name {
+    font-size: 1.5rem;
   }
 
   .exp-content {
@@ -741,6 +756,21 @@ body {
   }
   .right:after {
     left: auto;
+  }
+
+  .height-auto {
+    height: 200px !important;
+  }
+
+  .edu-wrap .edu-1, .edu-wrap .edu-2 {
+    width: 90%;
+  }
+  .edu-wrap .edu-1 .details-wrap .course, .edu-wrap .edu-2 .details-wrap .course {
+    font-size: 20px;
+  }
+
+  .social-icons {
+    width: 70%;
   }
 }
 

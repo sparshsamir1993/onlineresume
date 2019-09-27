@@ -639,6 +639,12 @@ body{
 
     }
 }
+.kh-logo{
+    
+    width: 80% !important;
+    margin: 0 auto;
+    display: block;
+}
 
 /***************** keyframes **********************/
 
@@ -727,8 +733,8 @@ body{
             .flipper{
                 .back{
                     .logo-wrap{
-                        width: 75%;
-                        height: 60%;   
+                        width: 60%;
+                        height: auto;   
                     }
                 }
                 .front::before{
@@ -737,6 +743,14 @@ body{
                 .front{
                     .container{
                         padding-top:90px;
+
+                        ul{
+                            font-size: .7rem;
+                        }
+
+                        .profession{
+                            font-size: .9rem;
+                        }
                     }
                 }
             }
@@ -781,10 +795,13 @@ body{
     
     .exp-container{
         width: 82%;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
 
         .company-logo{
             width: 100%;
+        }
+        .company-name{
+            font-size: 1.5rem;
         }
     }
     .exp-content{
@@ -806,4 +823,23 @@ body{
             left: auto;
         }
     }
+    .height-auto{
+        height:200px !important
+    }
+    .edu-wrap{
+        .edu-1, .edu-2{
+            width: 90%;
+
+            .details-wrap{
+                .course{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .social-icons{
+        width: 70%;
+    }
+    
+
 }
