@@ -57,10 +57,12 @@ body {
   transform: translateX(-50%) translateY(-50%);
   top: 50%;
   left: 50%;
+  width: 100%;
+  text-align: center;
   animation: display-after-specs 4s ease-in 0s normal forwards;
 }
 
-/***************** navbar **********************/
+/***************** top-navbar **********************/
 .nav-bar {
   height: 22%;
   position: absolute;
@@ -96,6 +98,16 @@ body {
   text-decoration: none;
   color: white;
   font-family: Raleway-semibold;
+}
+
+/***************** top-navbar **********************/
+.main-nav {
+  position: absolute;
+  width: 25%;
+  background: white;
+  right: 0;
+  height: 100%;
+  z-index: 1;
 }
 
 /***************** introbody **********************/
@@ -280,6 +292,7 @@ body {
   position: relative;
   background-color: #edeeef;
   color: black;
+  min-height: 200px;
 }
 .exp-container .company-name {
   font-family: sf-bold;
@@ -289,12 +302,15 @@ body {
   left: 10px;
 }
 .exp-container .company-logo {
-  width: 60%;
   margin: 0 auto;
 }
 .exp-container .company-logo img {
   height: 100%;
   width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
 .exp-container .job-title {
   padding: 10px;
@@ -303,7 +319,7 @@ body {
   font-family: sf-bold;
 }
 .exp-container .time-period {
-  padding: 10px;
+  padding: 0 10px;
   padding-top: 0;
 }
 .exp-container .exp-content {
@@ -327,7 +343,6 @@ body {
 }
 
 .height-auto {
-  height: 190px !important;
   transition: height 0.5s ease-in;
 }
 
@@ -534,7 +549,8 @@ body {
   transition: 0.6s;
   position: relative;
 }
-.contact-me .card .flipper .front, .contact-me .card .flipper .back {
+.contact-me .card .flipper .front,
+.contact-me .card .flipper .back {
   backface-visibility: hidden;
   position: absolute;
   top: 0;
@@ -557,7 +573,8 @@ body {
   padding-left: 0;
   line-height: 2em;
 }
-.contact-me .card .flipper .front::before, .contact-me .card .flipper .front::after {
+.contact-me .card .flipper .front::before,
+.contact-me .card .flipper .front::after {
   content: "";
   position: absolute;
   right: 0;
@@ -595,9 +612,10 @@ body {
 }
 
 .kh-logo {
-  width: 80% !important;
+  width: 50% !important;
   margin: 0 auto;
   display: block;
+  height: 60% !important;
 }
 
 /***************** keyframes **********************/
@@ -622,11 +640,11 @@ body {
 @keyframes display-after-specs {
   0% {
     opacity: 0;
-    font-size: 12px;
+    font-size: 0;
   }
   100% {
     opacity: 1;
-    font-size: 30px;
+    font-size: 200%;
   }
 }
 @keyframes expand-jobs-hr {
@@ -642,15 +660,18 @@ body {
 /***************** media query **********************/
 /***************** media query **********************/
 @media (max-width: 480px) {
-  .job2-description, .job1-description {
+  .job2-description,
+.job1-description {
     flex-direction: column;
   }
-  .job2-description .title, .job1-description .title {
+  .job2-description .title,
+.job1-description .title {
     width: 100%;
     margin-left: 0;
     text-align: center;
   }
-  .job2-description .description, .job1-description .description {
+  .job2-description .description,
+.job1-description .description {
     padding-right: 10px;
   }
 
@@ -693,11 +714,13 @@ body {
     font-size: 0.9rem;
   }
 
-  .job2-parallax, .job1-parallax {
+  .job2-parallax,
+.job1-parallax {
     background-size: 100%;
   }
 
-  .job1-description .title, .job2-description .title {
+  .job1-description .title,
+.job2-description .title {
     margin-top: 20px;
     margin-bottom: 40px;
   }
@@ -758,14 +781,12 @@ body {
     left: auto;
   }
 
-  .height-auto {
-    height: 200px !important;
-  }
-
-  .edu-wrap .edu-1, .edu-wrap .edu-2 {
+  .edu-wrap .edu-1,
+.edu-wrap .edu-2 {
     width: 90%;
   }
-  .edu-wrap .edu-1 .details-wrap .course, .edu-wrap .edu-2 .details-wrap .course {
+  .edu-wrap .edu-1 .details-wrap .course,
+.edu-wrap .edu-2 .details-wrap .course {
     font-size: 20px;
   }
 

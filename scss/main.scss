@@ -1,845 +1,846 @@
-
-html{
-    height: 100%;
-    font-family: Raleway-regular;
+html {
+  height: 100%;
+  font-family: Raleway-regular;
 }
-body{
-	min-height: 100%;
-	margin:0;
+body {
+  min-height: 100%;
+  margin: 0;
 }
 /*************************** FONTS ********************/
 
-@font-face{
-	font-family: Raleway-semibold;
-	src: url(../assets/fonts/Raleway/Raleway-SemiBold.ttf);
+@font-face {
+  font-family: Raleway-semibold;
+  src: url(../assets/fonts/Raleway/Raleway-SemiBold.ttf);
 }
-@font-face{
-	font-family: Raleway-regular;
-	src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
+@font-face {
+  font-family: Raleway-regular;
+  src: url("../assets/fonts/Raleway/Raleway-Regular.ttf");
 }
 
-@font-face{
-    font-family: sf-regular;
-    src: url("../assets/fonts/sanfrancisco/SanFranciscoText-Regular.otf")
+@font-face {
+  font-family: sf-regular;
+  src: url("../assets/fonts/sanfrancisco/SanFranciscoText-Regular.otf");
 }
-@font-face{
-    font-family: sf-bold;
-    src: url("../assets/fonts/sanfrancisco/SanFranciscoText-Bold.otf");
+@font-face {
+  font-family: sf-bold;
+  src: url("../assets/fonts/sanfrancisco/SanFranciscoText-Bold.otf");
 }
 /******************* LOADER ********************/
 
-.loader{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
-.loader-wrapper{
-    width: 30%;
-    height: 60%;
-    margin: 0 auto;
-    display: flex;
-    background-color: rgb(231, 231, 231);
-    border-radius: 50%;
-    position: relative;
-    img{
-        height: 100%;
-        width:100%;
-        transform-origin: 50% 42%;
-        animation: specs-on 3s ease-in 1 normal forwards;
-    }
-}
-.loader-text{
-    position: absolute;
-    transform: translateX(-50%) translateY(-50%);
-    top: 50%;
-    left: 50%;
-    animation: display-after-specs 4s ease-in 0s  normal forwards;
-}
-
-/***************** navbar **********************/
-
-.nav-bar{
-    height: 22%;
-    // border-bottom: 1px solid rgb(196, 193, 193);
-    position: absolute;
-    width: 100%;
-    z-index: 1
-}
-.nav-link-wrap{
+.loader-wrapper {
+  width: 30%;
+  height: 60%;
+  margin: 0 auto;
+  display: flex;
+  background-color: rgb(231, 231, 231);
+  border-radius: 50%;
+  position: relative;
+  img {
     height: 100%;
     width: 100%;
-    display: flex;
+    transform-origin: 50% 42%;
+    animation: specs-on 3s ease-in 1 normal forwards;
+  }
 }
-.nav-banner{
-    height: 160px;
-    width: 170px;
-    margin-top: 10px;
-    margin-left: 30px;
-    
-    img{
-        height: 100%;
-        width: 100%;
-    }
+.loader-text {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  animation: display-after-specs 4s ease-in 0s normal forwards;
 }
-.nav-link{
-    // height: 30px;
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    // margin-left: 5%;
-    text-align: center;
 
-    a{
-        text-decoration: none;
-        color: white;
-        font-family: Raleway-semibold;
-    }
-    
+/***************** top-navbar **********************/
+
+.nav-bar {
+  height: 22%;
+  // border-bottom: 1px solid rgb(196, 193, 193);
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.nav-link-wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.nav-banner {
+  height: 160px;
+  width: 170px;
+  margin-top: 10px;
+  margin-left: 30px;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+.nav-link {
+  // height: 30px;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  // margin-left: 5%;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: Raleway-semibold;
+  }
+}
+
+/***************** top-navbar **********************/
+
+.main-nav {
+  position: absolute;
+  width: 25%;
+  background: white;
+  right: 0;
+  height: 100%;
+  z-index: 1;
 }
 
 /***************** introbody **********************/
-.intro{
-    height: 100vh;
-    background: linear-gradient(.25turn, black 60%, grey);
+.intro {
+  height: 100vh;
+  background: linear-gradient(0.25turn, black 60%, grey);
+  position: relative;
+  .dp-wrap {
+    height: 100%;
+    width: 19%;
+    margin: 0 80.9%;
     position: relative;
-    .dp-wrap{
-        height: 100%;
-        width: 19%;
-        margin: 0 80.9%;
-        position: relative;
 
-        img{
-            position: absolute;
-            bottom: 0;
-            right: 0;
-        }
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
+  }
 
-    .intro-text-wrap{
-        color: white;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        left: 35%;
-        text-align: center;
-        margin-left: 30px;
-        height: 100px;
-        width: 35%;
-        font-family: Raleway-semibold;
-        
-    }
-    .to-change{
-        position: absolute;
-        opacity: 0;
-        width: 100%;
-        text-align: center;
-        // width: 200px;
-    }
+  .intro-text-wrap {
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 35%;
+    text-align: center;
+    margin-left: 30px;
+    height: 100px;
+    width: 35%;
+    font-family: Raleway-semibold;
+  }
+  .to-change {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    // width: 200px;
+  }
 
-    .intro-text{
-        font-size: 60px;
+  .intro-text {
+    font-size: 60px;
 
-        .to-change{
-            font-size: 55px;
-        }
+    .to-change {
+      font-size: 55px;
     }
+  }
 }
 /***************** experience *********************/
 
-.experience-wrap{
-    background:  #edeeef;
-    // min-height: 100vh;
-    // overflow: auto;
+.experience-wrap {
+  background: #edeeef;
+  // min-height: 100vh;
+  // overflow: auto;
 }
 
-.jobs-worked-in-heading{
-    width: 15%;
-    margin: 0 auto;
-    padding-top: 30px;
-    color: black;
-    font-size: 30px;
+.jobs-worked-in-heading {
+  width: 15%;
+  margin: 0 auto;
+  padding-top: 30px;
+  color: black;
+  font-size: 30px;
+  font-family: Raleway-semibold;
+  text-align: center;
+
+  hr {
+    // margin-left: 0;
+    border: 2px solid black;
+    width: 0px;
+  }
+}
+.expand-jobs-hr {
+  animation: expand-jobs-hr 1s ease-in 0s normal forwards;
+}
+[data-aos="expand-jobs-hr"] {
+  // animation: expand-jobs-hr 2s ease-in  normal forwards;
+  width: 0;
+  &.aos-animate {
+    width: 100%;
+  }
+}
+
+.job1-parallax {
+  height: 300px;
+  width: 100%;
+  background-image: url("../assets/zoho.png");
+  background-color: white;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-attachment: fixed;
+  margin-top: 50px;
+}
+
+.job1-description {
+  width: 100%;
+  background-color: black;
+  // margin-top: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  .title {
+    font-size: 25px;
     font-family: Raleway-semibold;
-    text-align: center;
-
-    hr{
-        // margin-left: 0;
-        border: 2px solid black;
-        width: 0px;
-    }
-}
-.expand-jobs-hr{
-    animation: expand-jobs-hr 1s ease-in 0s normal forwards;
-}
-[data-aos="expand-jobs-hr"]{
-    // animation: expand-jobs-hr 2s ease-in  normal forwards;
-    width: 0;
-    &.aos-animate{
-        width: 100%;
-    }
-}
-
-.job1-parallax{
-    height: 300px;
-	width: 100%;
-    background-image: url("../assets/zoho.png");
-    background-color: white;
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-attachment: fixed;
-    margin-top: 50px;
-}
-
-.job1-description{
-    width: 100%;
-    background-color: black;
-    // margin-top: 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    width: 30%;
+    margin-left: 10%;
+    margin-right: 15px;
     display: flex;
-    .title{
-        font-size: 25px;
-        font-family:Raleway-semibold;
-        width: 30%;
-        margin-left: 10%;
-        margin-right: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: white;
-    }
-    .description{
-        color: white;
-        ul{
-            line-height: 3em;
-        }
-        li{
-            font-family: sf-regular;
-        }
-    }
-}
-
-.job2-parallax{
-    height: 300px;
-	width: 100%;
-    background-image: url("../assets/commutatus.png");
-    background-color: white;
-    background-size: 45%;
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-attachment: fixed;
-    // margin-top: 100px;
-}
-
-.job2-description{
-    width: 100%;
-    background-color: black;
-    // margin-top: 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    // margin-bottom: 30px;
-    .title{
-        font-size: 25px;
-        font-family:Raleway-semibold;
-        width: 30%;
-        margin-left: 10%;
-        margin-right: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        color: white;
-    }
-    .description{
-        color: white;
-        ul{
-            line-height: 3em;
-        }
-        li{
-            font-family: sf-regular;
-        }        
-    }
-
-}
-
-.timeline{
-    max-width: 1200px;
-    position: relative;
-    margin: 0 auto;
-    padding: 3%;
-}
-.timeline::after{
-    content: '';
-    position: absolute;
-    width: 10px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-}
-.exp-container{
-    // padding: 20px 5px;
-    position: relative;
-    width: 45%;
-    background-color: black;
+    flex-direction: column;
+    justify-content: center;
     color: white;
-    // padding-left: 20px;
-    border-radius: 10px;
-
-    .content{
-        padding: 5px;
-
+  }
+  .description {
+    color: white;
+    ul {
+      line-height: 3em;
     }
-    .company{
-        position: relative;
-        background-color: #edeeef;
-        color: black;
+    li {
+      font-family: sf-regular;
     }
-    .company-name{
-        font-family: sf-bold;
-        font-size: 2rem;
-        position: absolute;
-        bottom: 0;
-        left: 10px;
-    }
-    .company-logo{
-        // height: 75px;
-        width: 60%;
-        margin: 0 auto;
-
-        img{
-            height: 100%;
-            width: 100%;
-        }
-    }
-    .job-title{
-        padding: 10px;
-        padding-bottom: 0;
-        font-size: 1.5rem;
-        font-family: sf-bold;
-    }
-    .time-period{
-        padding: 10px;
-        padding-top: 0;
-    }
-    .exp-content{
-        padding: 10px;
-        padding-top: 0;
-        height: 0;
-        overflow: hidden;
-        transition: height .5s ease-in;
-
-        li{
-            padding-bottom: 5px;
-        }
-    }
-    .more-arrow{
-        display: flex;
-        justify-content: center;
-        padding-bottom: 10px;
-        transform-origin: 50% 80%;
-        i{
-            transition: .5s ease-in;
-        }
-        
-    }
+  }
 }
 
-.height-auto{
-    height: 190px !important;
-    transition: height .5s ease-in;
+.job2-parallax {
+  height: 300px;
+  width: 100%;
+  background-image: url("../assets/commutatus.png");
+  background-color: white;
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-attachment: fixed;
+  // margin-top: 100px;
 }
-.exp-container::after{
-    content: '';
+
+.job2-description {
+  width: 100%;
+  background-color: black;
+  // margin-top: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  // margin-bottom: 30px;
+  .title {
+    font-size: 25px;
+    font-family: Raleway-semibold;
+    width: 30%;
+    margin-left: 10%;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+  }
+  .description {
+    color: white;
+    ul {
+      line-height: 3em;
+    }
+    li {
+      font-family: sf-regular;
+    }
+  }
+}
+
+.timeline {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  padding: 3%;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+}
+.exp-container {
+  // padding: 20px 5px;
+  position: relative;
+  width: 45%;
+  background-color: black;
+  color: white;
+  // padding-left: 20px;
+  border-radius: 10px;
+
+  .content {
+    padding: 5px;
+  }
+  .company {
+    position: relative;
+    background-color: #edeeef;
+    color: black;
+    min-height: 200px;
+  }
+  .company-name {
+    font-family: sf-bold;
+    font-size: 2rem;
     position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -45px;
-    background-color: red;
-    border: 4px solid orange;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-}
-.rotate-arrow{
-    transform: rotate(180deg);
+    bottom: 0;
+    left: 10px;
+  }
+  .company-logo {
+    margin: 0 auto;
+
+    img {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+  .job-title {
+    padding: 10px;
+    padding-bottom: 0;
+    font-size: 1.5rem;
+    font-family: sf-bold;
+  }
+  .time-period {
+    padding: 0 10px;
+    padding-top: 0;
+  }
+  .exp-content {
+    padding: 10px;
+    padding-top: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in;
+
+    li {
+      padding-bottom: 5px;
+    }
+  }
+  .more-arrow {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
     transform-origin: 50% 80%;
-    transition: .5s ease-in;
+    i {
+      transition: 0.5s ease-in;
+    }
+  }
 }
-.left{
-    left: 3%;
+
+.height-auto {
+  transition: height 0.5s ease-in;
 }
-.right{
-    left: 53%;
+.exp-container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -45px;
+  background-color: red;
+  border: 4px solid orange;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
 }
-.right::after{
-    left: -47px;
+.rotate-arrow {
+  transform: rotate(180deg);
+  transform-origin: 50% 80%;
+  transition: 0.5s ease-in;
 }
-.left::before{
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 20px;
-    width: 0;
-    z-index: 1;
-    right: -10px;
-    border:  medium solid black;
-    border-width:10px 0px 10px 10px;
-    border-color: transparent transparent transparent black;
+.left {
+  left: 3%;
 }
-.right::before{
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 20px;
-    width: 0;
-    z-index: 1;
-    left: -10px;
-    border:  medium solid black;
-    border-width:10px 10px 10px 0px;
-    border-color: transparent black transparent transparent;
+.right {
+  left: 53%;
+}
+.right::after {
+  left: -47px;
+}
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 20px;
+  width: 0;
+  z-index: 1;
+  right: -10px;
+  border: medium solid black;
+  border-width: 10px 0px 10px 10px;
+  border-color: transparent transparent transparent black;
+}
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 20px;
+  width: 0;
+  z-index: 1;
+  left: -10px;
+  border: medium solid black;
+  border-width: 10px 10px 10px 0px;
+  border-color: transparent black transparent transparent;
 }
 /***************** education **********************/
 
-.edu-wrap{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px;
-    .edu-1{
-        background-image: url("../assets/srm.png");
-        background-size: 80%;
-        height: 300px;
-        width: 400px;
-        background-repeat: no-repeat;
-        background-position: 50%;
-        position: relative;
+.edu-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  .edu-1 {
+    background-image: url("../assets/srm.png");
+    background-size: 80%;
+    height: 300px;
+    width: 400px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: relative;
 
-        .details-wrap{
-            position: absolute;
-            bottom: 0;
-            height: 0;
-            overflow: hidden;
-            width: 100%;
-            background-color:  rgba(73, 83, 83, 0.8);
-            transition: height .5s;
-            border-radius: 7px;
-            text-align: center;
-            color: white;
-            .course{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
-                width: 100%;
-                line-height: 2em;
-                font-size: 25px;
-            }
-        }
-        &:hover, &:active{
-            .details-wrap{
-                height: 100%;
-                transition: height .5s;
-
-
-            }
-        }        
+    .details-wrap {
+      position: absolute;
+      bottom: 0;
+      height: 0;
+      overflow: hidden;
+      width: 100%;
+      background-color: rgba(73, 83, 83, 0.8);
+      transition: height 0.5s;
+      border-radius: 7px;
+      text-align: center;
+      color: white;
+      .course {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 100%;
+        line-height: 2em;
+        font-size: 25px;
+      }
     }
-    .edu-2{
-        background-image: url("../assets/conestoga-college.png");
-        background-size: 80%;
-        height: 300px;
-        width: 400px;
-        background-repeat: no-repeat;
-        background-position: 50%;
-        position: relative;
-        
-        .details-wrap{
-            position: absolute;
-            bottom: 0;
-            height: 0;
-            overflow: hidden;
-            width: 100%;
-            background-color: rgba(73, 83, 83, 0.8);
-            transition: height .5s;
-            border-radius: 7px;
-            text-align: center;
-            color: white;
+    &:hover,
+    &:active {
+      .details-wrap {
+        height: 100%;
+        transition: height 0.5s;
+      }
+    }
+  }
+  .edu-2 {
+    background-image: url("../assets/conestoga-college.png");
+    background-size: 80%;
+    height: 300px;
+    width: 400px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: relative;
 
-             .course{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
-                width: 100%;
-                line-height: 2em;
-                font-size: 25px;
-             }
-            
-        }        
-        &:hover, &:active{
-            .details-wrap{
-                height: 100%;
-                transition: height .5s;
+    .details-wrap {
+      position: absolute;
+      bottom: 0;
+      height: 0;
+      overflow: hidden;
+      width: 100%;
+      background-color: rgba(73, 83, 83, 0.8);
+      transition: height 0.5s;
+      border-radius: 7px;
+      text-align: center;
+      color: white;
 
-            }
-        }
-    }    
+      .course {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 100%;
+        line-height: 2em;
+        font-size: 25px;
+      }
+    }
+    &:hover,
+    &:active {
+      .details-wrap {
+        height: 100%;
+        transition: height 0.5s;
+      }
+    }
+  }
 }
 
-.social-icons{
-    display: flex;
-    width: 40%;
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 50px;
-    
-    .fb{
-        background-color: rgb(60,90,153);
-        width: 33.33%;
-        text-align: center;
-        
-        i{
-            color: white;
-            top: 50%;
-            position: absolute;
-            transform: translateY(-50%) translateX(-50%);
-        }
-    }
+.social-icons {
+  display: flex;
+  width: 40%;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
 
-    .linkedin{
-        background: rgb(0,119,181);
-        width: 33.33%;
-        text-align: center;
-        i{
-            color: white;
-            top: 50%;
-            position: absolute;
-            transform: translateY(-50%) translateX(-50%);
-        }
+  .fb {
+    background-color: rgb(60, 90, 153);
+    width: 33.33%;
+    text-align: center;
+
+    i {
+      color: white;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%) translateX(-50%);
     }
-    .github{
-        background-color: black;
-        width: 33.33%;
-        text-align: center;
-        i{
-            color: white;
-            top: 50%;
-            position: absolute;
-            transform: translateY(-50%) translateX(-50%);
-        }
+  }
+
+  .linkedin {
+    background: rgb(0, 119, 181);
+    width: 33.33%;
+    text-align: center;
+    i {
+      color: white;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%) translateX(-50%);
     }
+  }
+  .github {
+    background-color: black;
+    width: 33.33%;
+    text-align: center;
+    i {
+      color: white;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
 }
 /***************** card **********************/
 
-.contact-me{
-    background-color: rgb(66, 66, 66);
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    .card{
-        height: 55%;
-        width: 50%;
-        position: absolute;
-        left:50%;
-        top:50%;
-        transform: translateX(-50%) translateY(-50%);
+.contact-me {
+  background-color: rgb(66, 66, 66);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  .card {
+    height: 55%;
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
 
-        &:hover, &:active{
-            .flipper{
-                .front{
-                    transform: perspective(1000px) rotateY(0deg);
-                }
-                .back{
-                    transform: perspective(1000px) rotateY(-180deg);
-                }
-            }
+    &:hover,
+    &:active {
+      .flipper {
+        .front {
+          transform: perspective(1000px) rotateY(0deg);
         }
-        .flipper{
+        .back {
+          transform: perspective(1000px) rotateY(-180deg);
+        }
+      }
+    }
+    .flipper {
+      height: 100%;
+      width: 100%;
+
+      transition: 0.6s;
+      // transform-style: preserve-3d;
+      position: relative;
+
+      .front,
+      .back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: transform 0.7s;
+        box-shadow: 1px 1px 29px 29px rgb(39, 39, 39);
+      }
+      .front {
+        z-index: 2;
+        background: beige;
+        transform: rotateY(180deg);
+
+        .container {
+          padding: 40px;
+          ul {
+            list-style: none;
+            padding-left: 0;
+            line-height: 2em;
+          }
+        }
+      }
+      .front::before,
+      .front::after {
+        content: "";
+        position: absolute;
+        right: 0;
+      }
+      .front::before {
+        background: #2c3e50;
+        width: 140px;
+        height: 120px;
+        bottom: 0;
+        clip-path: polygon(0 100%, 40% 0, 100% 100%);
+      }
+      .front::after {
+        background: grey;
+        width: 37%;
+        height: 100%;
+        top: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+      }
+      .back {
+        height: 100%;
+        width: 100%;
+        background: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotateY(0deg);
+        .logo-wrap {
+          height: 70%;
+          width: 35%;
+          img {
             height: 100%;
             width: 100%;
-            
-            
-            transition: 0.6s;
-            // transform-style: preserve-3d;
-            position: relative;
-            
-
-            .front, .back{
-                backface-visibility: hidden;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                transition: transform .7s;
-                box-shadow: 1px 1px 29px 29px rgb(39, 39, 39);
-                
-            }
-            .front{
-                z-index: 2;
-                background: beige;
-                transform:  rotateY(180deg);
-                
-                .container{
-                    padding: 40px;
-                    ul{
-                        list-style: none;
-                        padding-left: 0;
-                        line-height: 2em;
-                    }
-                }
-            }
-            .front::before, .front::after{
-                content: "";
-                position: absolute;
-                right: 0;
-            }
-            .front::before{
-                background: #2c3e50;
-                width: 140px;
-                height: 120px;
-                bottom: 0;
-                clip-path: polygon(0 100%,40% 0, 100% 100%);
-            }
-            .front::after{
-                background: grey;
-                width: 37%;
-                height: 100%;
-                top: 0;
-                clip-path: polygon(0 0,100% 0, 100% 100%, 100% 100%);
-            }
-            .back{
-                height: 100%;
-                width: 100%;
-                background: black;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transform:  rotateY(0deg);
-                .logo-wrap{
-                    height: 70%;
-                    width: 35%;
-                    img{
-                        height: 100%;
-                        width: 100%;
-                    }
-                }
-            
-            }
+          }
         }
-
-
+      }
     }
+  }
 }
-.kh-logo{
-    
-    width: 80% !important;
-    margin: 0 auto;
-    display: block;
+.kh-logo {
+  width: 50% !important;
+  margin: 0 auto;
+  display: block;
+  height: 60% !important;
 }
 
 /***************** keyframes **********************/
 
-@keyframes specs-on{
-    0%{
-        transform: rotateZ(0deg) scale(1,1);;
-        opacity: 1; 
-    }
-    40%{
-        transform: rotateZ(360deg);
-        opacity: .5;
-    }
-    90%{
-        transform: scale(5,5);
-        opacity: 0;
-    }
-    100%{
-        transform: scale(1,1);
-        opacity: 0;
-    }
+@keyframes specs-on {
+  0% {
+    transform: rotateZ(0deg) scale(1, 1);
+    opacity: 1;
+  }
+  40% {
+    transform: rotateZ(360deg);
+    opacity: 0.5;
+  }
+  90% {
+    transform: scale(5, 5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
 }
-@keyframes display-after-specs{
-    0%{
-        opacity: 0;
-        font-size: 12px;
-    }
-    100%{
-        opacity: 1;
-        font-size: 30px;
-        
-    }
-}
-
-@keyframes expand-jobs-hr{
-    from{
-        opacity: 1;
-        width: 0px;
-    }
-
-    to{
-        opacity: 1;
-        width: 100%;
-    }
+@keyframes display-after-specs {
+  0% {
+    opacity: 0;
+    font-size: 0;
+  }
+  100% {
+    opacity: 1;
+    font-size: 200%;
+  }
 }
 
+@keyframes expand-jobs-hr {
+  from {
+    opacity: 1;
+    width: 0px;
+  }
+
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
 
 /***************** media query **********************/
 
 /***************** media query **********************/
-@media  (max-width: 480px) {
-    .job2-description, .job1-description{
-        flex-direction: column;
-        
-        .title{
-            width: 100%;
-            margin-left: 0;
-            text-align: center;
+@media (max-width: 480px) {
+  .job2-description,
+  .job1-description {
+    flex-direction: column;
+
+    .title {
+      width: 100%;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .description {
+      padding-right: 10px;
+    }
+  }
+  .jobs-worked-in-heading {
+    width: 70%;
+  }
+  .edu-wrap {
+    flex-direction: column;
+  }
+
+  .loader-wrapper {
+    width: 300px;
+    height: 300px;
+
+    .loader-text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .contact-me {
+    .card {
+      width: 90%;
+      top: 45%;
+      height: 65%;
+      .flipper {
+        .back {
+          .logo-wrap {
+            width: 60%;
+            height: auto;
+          }
         }
-
-        .description{
-            padding-right: 10px;
+        .front::before {
+          clip-path: polygon(0 100%, 75% 0, 100% 100%);
         }
-    }
-    .jobs-worked-in-heading{
-        width: 70%;
-    }
-    .edu-wrap{
-        flex-direction: column;
-    }
+        .front {
+          .container {
+            padding-top: 90px;
 
-    .loader-wrapper{
-        width: 300px;
-        height: 300px;
-
-        .loader-text{
-            width: 100%;
-            text-align: center;
-        }
-    }
-
-    .contact-me{
-        .card{
-            width: 90%;
-            top: 45%;
-            height: 65%;
-            .flipper{
-                .back{
-                    .logo-wrap{
-                        width: 60%;
-                        height: auto;   
-                    }
-                }
-                .front::before{
-                    clip-path:  polygon(0 100%, 75% 0, 100% 100%);
-                }
-                .front{
-                    .container{
-                        padding-top:90px;
-
-                        ul{
-                            font-size: .7rem;
-                        }
-
-                        .profession{
-                            font-size: .9rem;
-                        }
-                    }
-                }
+            ul {
+              font-size: 0.7rem;
             }
-        }
-    }
-    .job2-parallax, .job1-parallax{
-        background-size: 100%;
-    }
 
-    .job1-description, .job2-description{
-        .title{
-            margin-top:20px;
-            margin-bottom: 40px;
-        }
-    }
-    .intro{
-        .dp-wrap{
-            img{
-                height: 40%;
+            .profession {
+              font-size: 0.9rem;
             }
+          }
         }
-        .intro-text{
-            font-size: 2rem;
-            .to-change{
-                font-size: 2.2rem;
-            }
-        }
-        .intro-text-wrap{
-            width: 80%;
-            left: 45%;
-            margin-left: 0;
-        }
+      }
     }
-    .nav-banner{
-        height: 100px;
-        width: 100px;
-    }
+  }
+  .job2-parallax,
+  .job1-parallax {
+    background-size: 100%;
+  }
 
-    .timeline::after{
-        left: 90%;
+  .job1-description,
+  .job2-description {
+    .title {
+      margin-top: 20px;
+      margin-bottom: 40px;
     }
-    
-    .exp-container{
-        width: 82%;
-        margin-bottom: 15px;
+  }
+  .intro {
+    .dp-wrap {
+      img {
+        height: 40%;
+      }
+    }
+    .intro-text {
+      font-size: 2rem;
+      .to-change {
+        font-size: 2.2rem;
+      }
+    }
+    .intro-text-wrap {
+      width: 80%;
+      left: 45%;
+      margin-left: 0;
+    }
+  }
+  .nav-banner {
+    height: 100px;
+    width: 100px;
+  }
 
-        .company-logo{
-            width: 100%;
-        }
-        .company-name{
-            font-size: 1.5rem;
-        }
-    }
-    .exp-content{
-        font-size: 11px;
-        line-height: 15px;
-        ul{
-            padding-left: 10px;
-        }
-    }
-    .right{
-        left: 3%;
-        &:before{
-            right: -10px;
-            left: auto;
-            border-width: 10px 0px 10px 10px;
-            border-color: transparent transparent transparent black;
-        }
-        &:after{
-            left: auto;
-        }
-    }
-    .height-auto{
-        height:200px !important
-    }
-    .edu-wrap{
-        .edu-1, .edu-2{
-            width: 90%;
+  .timeline::after {
+    left: 90%;
+  }
 
-            .details-wrap{
-                .course{
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-    .social-icons{
-        width: 70%;
-    }
-    
+  .exp-container {
+    width: 82%;
+    margin-bottom: 15px;
 
+    .company-logo {
+      width: 100%;
+    }
+    .company-name {
+      font-size: 1.5rem;
+    }
+  }
+  .exp-content {
+    font-size: 11px;
+    line-height: 15px;
+    ul {
+      padding-left: 10px;
+    }
+  }
+  .right {
+    left: 3%;
+    &:before {
+      right: -10px;
+      left: auto;
+      border-width: 10px 0px 10px 10px;
+      border-color: transparent transparent transparent black;
+    }
+    &:after {
+      left: auto;
+    }
+  }
+  .edu-wrap {
+    .edu-1,
+    .edu-2 {
+      width: 90%;
+
+      .details-wrap {
+        .course {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .social-icons {
+    width: 70%;
+  }
 }
